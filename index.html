@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Wargame</title>
+	<link rel="stylesheet" type="text/css" 
+	      href="fonts/webfontkit-imagery_forces/stylesheet.css" />
+	<style >
+	body{width:800px;
+		height:600px;
+	}
+	img{width:65%;}
+	.pion{
+		width:30px;
+		text-align:center;
+		position:absolute; 0px; left:0px;
+	}
+	.joueur{
+		border:2px solid green;
+		border-radius: 10px 10px;
+		background-color:lightgrey;
+	}
+	.monster{background-color:purple; color:white;
+	         font-family: 'imaginary_forcesregular',arial;
+			 font-size: 1.25em;}
+	
+    #menuJ{position:absolute; display:none;
+	       background-color:lightgrey; font-size:0.75em;
+		   margin:0px;
+		   border-radius:8px 8px;
+		   border:1px dashed black;
+		   }
+    #menuJ ul {list-style-type:none;
+				margin:0px; padding:3px;
+				}
+	#menuJ ul li:hover{background-color:white;}
+	#menuJ ul li:before{ content:"- ";}
+	a{text-decoration:none;}
+	
+	#menuDir{position:absolute;display:none;}
+	#menuDir input[type="button"]{padding: 2px;font-size:0.55em;
+			height:17px; width:20px;}
+			
+			
+	.malade1{border:4px dashed red;background-color:orange;color:white;}
+	.malade2{border:4px dashed red;background-color:purple;color:white;}
+	.malade3{border:4px dashed red;background-color:blue;color:white;}
+	.malade4{border:4px dashed red;background-color:red;color:white;}
+	
+	
+	</style>
+
+</head>
+<body>
+	<header>
+		<h1> mini JDR</h1>
+	</header>
+	<nav id="menuJ">
+		<ul><strong>Menu Joueur:</strong>
+			<hr/>
+			<li><a href="#" class="actionj" id="actionj1">Se déplacer</a></li>
+			<li>Prendre</li>
+			<li>Se nourrir/boire</li>
+			<li>Attaquer</li>
+		</ul>
+	</nav>
+	<nav id="menuDir">
+		<div>
+			<input type="button" id="dirN" value="N"  />
+			<input type="button" id="dirS" value="S"  />
+			<input type="button" id="dirE" value="E"  />
+			<input type="button" id="dirO" value="O"  />
+			<br/>
+			<input type="button" id="dirNE" value="NE"  />
+			<input type="button" id="dirSE" value="SE"  />
+			<input type="button" id="dirNO" value="NO"  />
+			<input type="button" id="dirSO" value="SO"  />
+			
+		</div>
+	</nav>
+	<section>
+		<div id="m1" class="pion monster">&#37;</div>
+		<div id="m2" class="pion monster">&#80;</div>	
+		<div id="m3" class="pion monster">&#77;</div>
+		<div id="J1" class="pion joueur">J</div>
+		
+		<figure class="map" id="theMap">
+			<img src="img/carte_pays.jpg" alt="la carte" />
+		</figure>
+	</section>
+	<!-- JAVASCRIPT -->
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/myjs.js"></script>
+</body>
+</html>
